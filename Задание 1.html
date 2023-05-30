@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border: none;
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleBtn" class="btn">
+    <i id="icon" class="fas fa-icon_01"></i>
+  </button>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const icon = document.getElementById('icon');
+    let isIcon01 = true;
+
+    toggleBtn.addEventListener('click', () => {
+      if (isIcon01) {
+        icon.className = 'fas fa-icon_02';
+        isIcon01 = false;
+      } else {
+        icon.className = 'fas fa-icon_01';
+        isIcon01 = true;
+      }
+    });
+  </script>
+</body>
+</html>
